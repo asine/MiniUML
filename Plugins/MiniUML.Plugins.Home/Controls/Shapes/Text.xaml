@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="MiniUML.Plugins.Home.Controls.Shapes.Text"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:MiniUML.View.Controls;assembly=MiniUML.View"
+             xmlns:views="clr-namespace:MiniUML.View.Views;assembly=MiniUML.View"
+             xmlns:utilities="clr-namespace:MiniUML.View.Utilities;assembly=MiniUML.View"
+             views:CanvasView.CustomDrag="True">
+
+    <UserControl.Resources>
+        <utilities:ShapeIdToControlConverter x:Key="ShapeIdToControlConverter" />
+    </UserControl.Resources>
+
+    <Canvas>
+        <controls:SingleClickBlock>
+            <TextBox Text="{Binding Attribute[Text].Value}" MinWidth="30" IsTabStop="False" BorderThickness="0" Background="Transparent" />
+        </controls:SingleClickBlock>
+        <controls:AnchorPoint Left="{Binding Attribute[Left].Value}"
+                              Top="{Binding Attribute[Top].Value}"
+                              SnapTarget="{Binding Path=Attribute[SnapTarget].Value, Converter={StaticResource ShapeIdToControlConverter}}" />
+    </Canvas>
+    
+</UserControl>

@@ -1,0 +1,103 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:MiniUML.View.Controls">
+
+    <Style TargetType="{x:Type controls:CommandButton}">
+
+        <Style.Resources>
+
+            <ControlTemplate x:Key="ControlTemplate" TargetType="{x:Type controls:CommandButton}">
+
+                <ControlTemplate.Resources>
+                    
+                    <Storyboard x:Key="MouseEnterItemStoryboard">
+                        <DoubleAnimation Storyboard.TargetName="ItemShadow"
+                         Storyboard.TargetProperty="Opacity"
+                         To="1.0" Duration="00:00:00.10"/>
+                    </Storyboard>
+
+                    <Storyboard x:Key="MouseLeaveItemStoryboard">
+                        <DoubleAnimation Storyboard.TargetName="ItemShadow"
+                         Storyboard.TargetProperty="Opacity"
+                         To="0.1" Duration="00:00:00.10"/>
+                    </Storyboard>
+                    
+                </ControlTemplate.Resources>
+                
+                <Grid x:Name="item">
+
+                    <Grid.BitmapEffect>
+                        <OuterGlowBitmapEffect x:Name="ItemShadow" GlowColor="Black" GlowSize="3" Opacity="0.10"/>
+                    </Grid.BitmapEffect>
+                    
+                    <Border BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"
+                            Padding="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="True"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}">
+
+                        <Image Stretch="Uniform" Source="{TemplateBinding Image}"/>
+
+                    </Border>
+
+                    <Border Margin="1,0,1,1"
+                            BorderThickness="0"
+                            CornerRadius="2"
+                            VerticalAlignment="Bottom"
+                            SnapsToDevicePixels="True"
+                            Background="{DynamicResource Style.Brushes.RibbonGallery.ItemHeaderBackground}">
+
+                        <TextBlock Padding="4,0,4,2"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   FontSize="10"
+                                   TextTrimming="CharacterEllipsis"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   Text="{TemplateBinding Content}"/>
+                    </Border>
+
+                </Grid>
+                
+                <ControlTemplate.Triggers>
+
+                    <EventTrigger RoutedEvent="Control.MouseEnter" SourceName="item">
+                        <BeginStoryboard Storyboard="{StaticResource MouseEnterItemStoryboard}"/>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Control.MouseLeave" SourceName="item">
+                        <BeginStoryboard Storyboard="{StaticResource MouseLeaveItemStoryboard}"/>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Control.MouseDown" SourceName="item">
+                        <BeginStoryboard Storyboard="{StaticResource MouseLeaveItemStoryboard}"/>
+                    </EventTrigger>
+
+                    <Trigger Property="IsEnabled" Value="false">
+                        <Setter Property="IsHitTestVisible" Value="False" TargetName="item"/>
+                        <Setter Property="Opacity" Value="0.5" TargetName="item"/>
+                    </Trigger>
+
+                </ControlTemplate.Triggers>
+                
+            </ControlTemplate>
+
+        </Style.Resources>
+
+        <Setter Property="Template" Value="{StaticResource ControlTemplate}"/>
+
+        <Setter Property="Foreground" Value="{DynamicResource Style.Brushes.RibbonGallery.ItemHeaderForeground}"/>
+        <Setter Property="Background" Value="{DynamicResource Style.Brushes.RibbonGallery.ItemBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Style.Brushes.RibbonGallery.ItemBorder}"/>
+        
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Width" Value="64"/>
+        <Setter Property="Height" Value="48"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+
+    </Style>
+
+</ResourceDictionary>

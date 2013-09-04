@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:shapes="clr-namespace:MiniUML.Plugins.UmlClassDiagram.Resources.Shapes">
+
+    <!-- Uml.Comment -->
+    <DataTemplate x:Key="Uml.Comment">
+        <shapes:UmlCommentShape>
+            <shapes:UmlCommentShape.Style>
+                <Style TargetType="shapes:UmlCommentShape">
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="#FFCCCC66"/>
+                    <Setter Property="Background" Value="#FFFFFFCC"/>
+                </Style>
+            </shapes:UmlCommentShape.Style>
+        </shapes:UmlCommentShape>
+    </DataTemplate>
+    
+</ResourceDictionary>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MiniUML.Plugins.Home.Controls.Shapes.EasterEgg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Canvas Width="0" Height="0">
+        <Polygon Stroke="Black" Fill="Yellow" x:Name="poly1">
+            <Polygon.Points>
+                <Point X="-22" Y="-69" />
+                <Point X="-48" Y="-46" />
+                <Point X="-53" Y="-7" />
+                <Point X="-25" Y="-23" />
+                <Point X="0" Y="-10" />
+                <Point X="25" Y="-23" />
+                <Point X="53" Y="-7" />
+                <Point X="48" Y="-46" />
+                <Point X="22" Y="-69" />
+            </Polygon.Points>
+        </Polygon>
+        <Polygon Stroke="Black" Fill="Yellow" x:Name="poly2">
+            <Polygon.Points>
+                <Point X="22" Y="69" />
+                <Point X="48" Y="46" />
+                <Point X="53" Y="7" />
+                <Point X="25" Y="-6" />
+                <Point X="0" Y="7" />
+                <Point X="-25" Y="-6" />
+                <Point X="-53" Y="7" />
+                <Point X="-48" Y="46" />
+                <Point X="-22" Y="69" />
+            </Polygon.Points>
+        </Polygon>
+    </Canvas>
+    
+</UserControl>

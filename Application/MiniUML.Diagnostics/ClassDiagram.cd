@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MiniUML.Diagnostics.ExceptionDialogWindow">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ExceptionDialogWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniUML.Diagnostics.ExceptionTypeConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExceptionDialogWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MiniUML.Diagnostics.ExceptionManager">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAFAgAIAQAAAAAAAAABAIAAAAAAAAAAABA=</HashCode>
+      <FileName>ExceptionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniUML.Diagnostics.FatalException" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DebugUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniUML.Diagnostics.DebugUtilities">
+    <Position X="6.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>DebugUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

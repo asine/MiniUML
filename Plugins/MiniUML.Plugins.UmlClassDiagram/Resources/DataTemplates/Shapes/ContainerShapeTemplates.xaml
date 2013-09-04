@@ -1,0 +1,130 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:shapes="clr-namespace:MiniUML.Plugins.UmlClassDiagram.Resources.Shapes">
+    
+    <!-- Uml.Interface -->
+    <DataTemplate x:Key="Uml.Interface">
+        <shapes:UmlInterfaceShape>
+            <shapes:UmlInterfaceShape.Style>
+                <Style TargetType="shapes:UmlInterfaceShape">
+                    <Setter Property="CornerRadius" Value="10" />
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="GroupHeaderBackgroundBrush" Value="#FFF3F7F0"/>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Offset="0" Color="#FFE5F5D5"/>
+                                    <GradientStop Offset="1" Color="White"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </shapes:UmlInterfaceShape.Style>
+        </shapes:UmlInterfaceShape>
+    </DataTemplate>
+
+    <!-- Uml.AbstractClass -->
+    <DataTemplate x:Key="Uml.AbstractClass">
+        <shapes:UmlClassShape>
+            <shapes:UmlClassShape.Resources>
+                <Style TargetType="TextBox" x:Key="UmlContainerNameStyle">
+                    <Setter Property="FontStyle" Value="Italic" />
+                </Style>
+            </shapes:UmlClassShape.Resources>
+            <shapes:UmlClassShape.Style>
+                <Style TargetType="shapes:UmlClassShape">
+                    <Setter Property="CornerRadius" Value="10" />
+                    <Setter Property="BorderThickness" Value="3"/>
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="GroupHeaderBackgroundBrush" Value="#FFF0F2F9"/>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Offset="0" Color="#FFD3DCEF"/>
+                                    <GradientStop Offset="1" Color="White"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </shapes:UmlClassShape.Style>
+        </shapes:UmlClassShape>
+    </DataTemplate>
+
+    <!-- Uml.Class -->
+    <DataTemplate x:Key="Uml.Class">
+        <shapes:UmlClassShape>
+            <shapes:UmlClassShape.Style>
+                <Style TargetType="shapes:UmlClassShape">
+                    <Setter Property="CornerRadius" Value="10" />
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="GroupHeaderBackgroundBrush" Value="#FFF0F2F9"/>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Offset="0" Color="#FFD3DCEF"/>
+                                    <GradientStop Offset="1" Color="White"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </shapes:UmlClassShape.Style>
+        </shapes:UmlClassShape>
+    </DataTemplate>
+
+    <!-- Uml.Struct -->
+    <DataTemplate x:Key="Uml.Struct">
+        <shapes:UmlStructShape>
+            <shapes:UmlStructShape.Style>
+                <Style TargetType="shapes:UmlStructShape">
+                    <Setter Property="CornerRadius" Value="0" />
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="GroupHeaderBackgroundBrush" Value="#FFF0F2F9"/>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Offset="0" Color="#FFD3DCEF"/>
+                                    <GradientStop Offset="1" Color="White"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </shapes:UmlStructShape.Style>
+        </shapes:UmlStructShape>
+    </DataTemplate>
+
+    <!-- Uml.Enum -->
+    <DataTemplate x:Key="Uml.Enum">
+        <shapes:UmlEnumShape>
+            <shapes:UmlEnumShape.Style>
+                <Style TargetType="shapes:UmlEnumShape">
+                    <Setter Property="CornerRadius" Value="0" />
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="GroupHeaderBackgroundBrush" Value="#FFFFFFFF"/>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Offset="0" Color="#FFDDD6EF"/>
+                                    <GradientStop Offset="1" Color="White"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </shapes:UmlEnumShape.Style>
+        </shapes:UmlEnumShape>
+    </DataTemplate>
+
+</ResourceDictionary>

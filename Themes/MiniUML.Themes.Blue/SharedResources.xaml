@@ -1,0 +1,122 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Resources used in MiniUML.Model.ViewModels.DocumentViewModel
+    ======================================================================================================================================================================================================== -->
+
+    <!-- Command images -->
+    <BitmapImage x:Key="Style.Images.Commands.New" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/New.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Open" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Open.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Save" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Save.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.SaveAs" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/SaveAs.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Export" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/SaveAs.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Print" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Print.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Undo" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Undo.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Redo" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Redo.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.SelectTheme" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/SelectTheme.png"/>
+
+
+    <!-- Resources used in MiniUML.Model.ViewModels.CanvasViewModel
+    ======================================================================================================================================================================================================== -->
+
+    <!-- Command images -->
+    <BitmapImage x:Key="Style.Images.Commands.Delete" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Delete.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Cut" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Cut.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Copy" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Copy.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Paste" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Paste.png"/>
+    <BitmapImage x:Key="Style.Images.Commands.Select" UriSource="/MiniUML.Themes.Blue;component/Images/Commands/Select.png"/>
+
+
+    <!-- Resources used in MiniUML.View.Views.DocumentView
+    ======================================================================================================================================================================================================== -->
+
+    <LinearGradientBrush x:Key="Style.Brushes.DocumentView.Background" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.00" Color="#FF9FBFE7"/>
+        <GradientStop Offset="0.35" Color="#FF88AAD6"/>
+        <GradientStop Offset="0.70" Color="#FF567DB0"/>
+        <GradientStop Offset="0.73" Color="#FF567DB0"/>
+        <GradientStop Offset="1.00" Color="#FF6591CD"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="Style.Brushes.DocumentView.ZoomSliderBackground" Color="#80567DC0"/>
+
+    <!-- Resources used in MiniUML.View.Views.RibbonView
+    ======================================================================================================================================================================================================== -->
+
+    <SolidColorBrush x:Key="Style.Brushes.RibbonView.Border" Color="#FF8DB2E3"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonView.Foreground" Color="#FF15428B"/>
+    <LinearGradientBrush x:Key="Style.Brushes.RibbonView.PanelBackground" StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.00" Color="#FFBFDBFF"/>
+            <GradientStop Offset="1.00" Color="#FFA0BEE5"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Style.Brushes.RibbonView.TabBackground" StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.00" Color="#FFF3F8FF"/>
+            <GradientStop Offset="0.15" Color="#FFF6FAFF"/>
+            <GradientStop Offset="0.15" Color="#FFEDF4FE"/>
+            <GradientStop Offset="1.00" Color="#FFDCE7F5"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Style.Brushes.RibbonView.ContentBackground" StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.00" Color="#FFDBE6F4"/>
+            <GradientStop Offset="0.20" Color="#FFCFDDEF"/>
+            <GradientStop Offset="0.20" Color="#FFC8D8ED"/>
+            <GradientStop Offset="0.40" Color="#FFCAD9ED"/>
+            <GradientStop Offset="0.60" Color="#FFD2E1F0"/>
+            <GradientStop Offset="0.80" Color="#FFD7E7F5"/>
+            <GradientStop Offset="1.00" Color="#FFE2F4FF"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+
+    <!-- Resources used in MiniUML.View.Views.RibbonGroup
+    ======================================================================================================================================================================================================== -->
+
+    <LinearGradientBrush x:Key="Style.Brushes.RibbonGroup.Border" StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.00" Color="#7FA8BBC9"/>
+            <GradientStop Offset="0.25" Color="#7F8FAABB"/>
+            <GradientStop Offset="1.00" Color="#7F598AB9"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGroup.BorderHighlight" Color="#72FFFFFF"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGroup.HeaderForeground" Color="#FF3E6AB9"/>
+    <LinearGradientBrush x:Key="Style.Brushes.RibbonGroup.HeaderBackground" StartPoint="0,0" EndPoint="0,1">        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.00" Color="#FFC2D8F1"/>
+            <GradientStop Offset="1.00" Color="#FFC0D8EF"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGroup.Background" Color="Transparent"/>
+
+
+    <!-- Resources used in MiniUML.View.Views.RibbonGallery
+    ======================================================================================================================================================================================================== -->
+
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGallery.Border" Color="#FFB9D0ED"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGallery.Background" Color="#FFD4E6F8"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGallery.ItemBorder" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGallery.ItemHeaderForeground" Color="#808080"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGallery.ItemHeaderBackground" Color="#90F0F0F0"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonGallery.ItemBackground" Color="#FFFFFFFF"/>
+
+
+    <!-- Resources used in MiniUML.View.Views.RibbonButton
+    ======================================================================================================================================================================================================== -->
+
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.NormalForeground" Color="#FF15428B"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.NormalBackground" Color="Transparent"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.NormalBorder" Color="Transparent"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.DefaultedBorder" Color="Transparent"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.MouseOverBackground" Color="#40FFFFFF"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.PressedBackground" Color="#60FFFFFF"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.PressedBorder" Color="#60FFFFFF"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.DisabledForeground" Color="#FF808080"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.DisabledBackground" Color="Transparent"/>
+    <SolidColorBrush x:Key="Style.Brushes.RibbonButton.DisabledBorder" Color="Transparent"/>
+
+
+</ResourceDictionary>

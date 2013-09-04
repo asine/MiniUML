@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MiniUML.Framework.CommandModel">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAICAgAAAEAAAABAQAAAAAQBAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniUML.Framework.CreateCommandBinding">
+    <Position X="0.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAAAAAAAQBAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>CreateCommandBinding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniUML.Framework.DataModel" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="MiniUML.Framework.DataModel.ModelState">
+        <TypeIdentifier>
+          <NewMemberFileName>DataModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQQAAAAQAAAAAACAAAiACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>DataModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MiniUML.Framework.PluginModel">
+    <Position X="9.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIgAAAAAAAAAAAAQQAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PluginModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniUML.Framework.PluginManager">
+    <Position X="9.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAEAiAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PluginManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniUML.Framework.ViewModel" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MiniUML.Framework.Utilities">
+    <Position X="12.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAIIAAAAAAIQAAAAAgAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MiniUML.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PluginDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\</Value>
+    </Setting>
+    <Setting Name="ThemeAssembly" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\MiniUML.Themes.Gray.dll</Value>
+    </Setting>
+    <Setting Name="DefaultPageSize" Type="System.Windows.Size" Scope="User">
+      <Value Profile="(Default)">793.7007874016,1122.5196850394</Value>
+    </Setting>
+    <Setting Name="DefaultPageMargins" Type="System.Windows.Thickness" Scope="User">
+      <Value Profile="(Default)">37.7952755906,37.7952755906,37.7952755906,37.7952755906</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

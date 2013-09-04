@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MiniUML.Plugins.UmlClassDiagram;component/Resources/DataTemplates/Shapes/AssociationShapeTemplates.xaml"/>
+        <ResourceDictionary Source="/MiniUML.Plugins.UmlClassDiagram;component/Resources/DataTemplates/Shapes/ContainerShapeTemplates.xaml"/>
+        <ResourceDictionary Source="/MiniUML.Plugins.UmlClassDiagram;component/Resources/DataTemplates/Shapes/MemberShapeTemplates.xaml"/>
+        <ResourceDictionary Source="/MiniUML.Plugins.UmlClassDiagram;component/Resources/DataTemplates/Shapes/ShapeTemplates.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

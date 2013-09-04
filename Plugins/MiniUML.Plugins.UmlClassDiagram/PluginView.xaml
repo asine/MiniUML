@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="MiniUML.Plugins.UmlClassDiagram.PluginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:MiniUML.View.Controls;assembly=MiniUML.View"
+             xmlns:framework="clr-namespace:MiniUML.Framework;assembly=MiniUML.Framework">
+
+    <DockPanel LastChildFill="False">
+
+        <controls:RibbonGroup Header="Shapes">
+
+            <DockPanel LastChildFill="False">
+
+                <controls:RibbonGallery>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateInterfaceShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateInterfaceShape}"/>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateAbstractClassShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateAbstractClassShape}"/>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateClassShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateClassShape}"/>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateStructShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateStructShape}"/>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateEnumShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateEnumShape}"/>
+
+                </controls:RibbonGallery>
+
+                <controls:RibbonGallery>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateAssociationShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateAssociationShape}"/>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateInheritanceShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateInheritanceShape}"/>
+
+                </controls:RibbonGallery>
+
+                <controls:RibbonGallery>
+
+                    <controls:CommandButton CommandModel="{Binding Path=cmd_CreateCommentShape}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=cmd_CreateCommentShape}"/>
+
+                </controls:RibbonGallery>
+
+                <controls:CommandButton ButtonStyle="ImageAboveText" ImageHeight="32" ImageWidth="32"
+                                        CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Select}"
+                                        framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Select}"/>
+            </DockPanel>
+
+        </controls:RibbonGroup>
+
+    </DockPanel>
+
+</UserControl>

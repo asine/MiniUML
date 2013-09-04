@@ -1,0 +1,17 @@
+﻿<Control x:Class="MiniUML.Plugins.UmlClassDiagram.Resources.Shapes.GenericUmlMemberShape"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:controls="clr-namespace:MiniUML.View.Controls;assembly=MiniUML.View">
+
+    <Control.Template>
+        <ControlTemplate>
+            <controls:SingleClickBlock>
+                <TextBox Margin="20,1,8,1"
+                         BorderThickness="0" Background="Transparent" Foreground="Black" IsTabStop="False"
+                         Text="{Binding Path=Attribute[Name].Value, UpdateSourceTrigger='PropertyChanged'}"
+                         LostFocus="content_LostFocus"/>
+            </controls:SingleClickBlock>
+        </ControlTemplate>
+    </Control.Template>
+
+</Control>

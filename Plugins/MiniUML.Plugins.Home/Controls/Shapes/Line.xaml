@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="MiniUML.Plugins.Home.Controls.Shapes.Line"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:MiniUML.View.Controls;assembly=MiniUML.View"
+             xmlns:views="clr-namespace:MiniUML.View.Views;assembly=MiniUML.View"
+             xmlns:utilities="clr-namespace:MiniUML.View.Utilities;assembly=MiniUML.View"
+             x:Name="_this"
+             SnapsToDevicePixels="True"
+             views:CanvasView.CustomDrag="True">
+
+    <UserControl.Resources>
+        <Style TargetType="Line">
+            <Setter Property="Stroke" Value="{Binding ElementName='_this', Path='Stroke'}"/>
+        </Style>
+
+        <!-- Set the style of arrow heads (whose style must be {DynamicResource StrokeStyle}). -->
+        <Style x:Key="StrokeStyle" TargetType="Shape">
+            <Setter Property="Stroke" Value="{Binding ElementName='_this', Path='Stroke'}"/>
+        </Style>
+
+        <utilities:ArrowTemplateSelector x:Key="ArrowTemplateSelector"/>
+        <utilities:ShapeIdToControlConverter x:Key="ShapeIdToControlConverter" />
+    </UserControl.Resources>
+
+    <Canvas>
+        <Line X1="{Binding ElementName=_this, Path='FromX'}"
+              Y1="{Binding ElementName=_this, Path='FromY'}"
+              X2="{Binding ElementName=_this, Path='ToX'}"
+              Y2="{Binding ElementName=_this, Path='ToY'}" />
+
+        <Canvas Width="0" Height="0" x:Name="_textCanvas">
+            <Canvas.RenderTransform>
+                <RotateTransform Angle="{Binding ElementName='_this', Path=TextAngleInDegrees}" />
+            </Canvas.RenderTransform>
+            <controls:SingleClickBlock x:Name="_textBlock" Canvas.Bottom="0">
+                <TextBox TextAlignment="Center" Text="{Binding Path='Attribute[Text].Value'}" IsTabStop="False" BorderThickness="0" Background="Transparent" />
+            </controls:SingleClickBlock>
+        </Canvas>
+
+        <ContentControl ContentTemplateSelector="{StaticResource ArrowTemplateSelector}"
+            Canvas.Left="{Binding Path=FirstNode.Attribute[Left].Value}"
+            Canvas.Top="{Binding Path=FirstNode.Attribute[Top].Value}">
+            <ContentControl.RenderTransform>
+                <RotateTransform Angle="{Binding ElementName='_this', Path=FromAngleInDegrees}" />
+            </ContentControl.RenderTransform>
+            <Binding Path="Attribute[FromArrow].Value"/>
+        </ContentControl>
+
+        <ContentControl ContentTemplateSelector="{StaticResource ArrowTemplateSelector}"
+            Canvas.Left="{Binding Path=LastNode.Attribute[Left].Value}"
+            Canvas.Top="{Binding Path=LastNode.Attribute[Top].Value}">
+            <ContentControl.RenderTransform>
+                <RotateTransform Angle="{Binding ElementName='_this', Path=ToAngleInDegrees}" />
+            </ContentControl.RenderTransform>
+            <Binding Path="Attribute[ToArrow].Value"/>
+        </ContentControl>
+
+        <controls:AnchorPoint x:Name="_fromAnchor"
+                Canvas.Left="{Binding Path=FirstNode.Attribute[Left].Value}"
+                Canvas.Top="{Binding Path=FirstNode.Attribute[Top].Value}"
+                Left="{Binding Path=FirstNode.Attribute[Left].Value}"
+                Top="{Binding Path=FirstNode.Attribute[Top].Value}"
+                SnapTarget="{Binding Path=Attribute[From].Value, Converter={StaticResource ShapeIdToControlConverter}}">
+        </controls:AnchorPoint>
+        <controls:AnchorPoint x:Name="_toAnchor"
+                Canvas.Left="{Binding Path=LastNode.Attribute[Left].Value}"
+                Canvas.Top="{Binding Path=LastNode.Attribute[Top].Value}"
+                Left="{Binding Path=LastNode.Attribute[Left].Value}"
+                Top="{Binding Path=LastNode.Attribute[Top].Value}"
+                SnapTarget="{Binding Path=Attribute[To].Value, Converter={StaticResource ShapeIdToControlConverter}}">
+        </controls:AnchorPoint>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="MiniUML.Plugins.Home.PluginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:MiniUML.View.Controls;assembly=MiniUML.View"
+             xmlns:framework="clr-namespace:MiniUML.Framework;assembly=MiniUML.Framework">
+
+    <DockPanel LastChildFill="False">
+
+        <controls:RibbonGroup Header="File">
+
+            <StackPanel Orientation="Horizontal">
+
+                <controls:CommandButton ButtonStyle="ImageAboveText" ImageHeight="32" ImageWidth="32"
+                                        CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Open}"
+                                        framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Open}"/>
+
+                <controls:CommandButton ButtonStyle="ImageAboveText" ImageHeight="32" ImageWidth="32"
+                                        CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Save}"
+                                        framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Save}"/>
+
+                <WrapPanel Orientation="Vertical">
+
+                    <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                            CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_SaveAs}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_SaveAs}"/>
+
+                    <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                            CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_New}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_New}"/>
+
+                    <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                            CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Export}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Export}"/>
+                    
+                    <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                            CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Print}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Print}"/>
+                </WrapPanel>
+
+            </StackPanel>
+
+        </controls:RibbonGroup>
+
+        <controls:RibbonGroup Header="Clipboard">
+
+            <StackPanel Orientation="Horizontal">
+
+                <controls:CommandButton ButtonStyle="ImageAboveText" ImageHeight="32" ImageWidth="32"
+                                        CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Paste}"
+                                        framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Paste}"/>
+
+                <WrapPanel Orientation="Vertical">
+
+                    <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                            CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Cut}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Cut}"/>
+
+                    <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                            CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Copy}"
+                                            framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.vm_CanvasViewModel.cmd_Copy}"/>
+                </WrapPanel>
+
+            </StackPanel>
+
+        </controls:RibbonGroup>
+
+        <controls:RibbonGroup Header="Changes">
+
+            <StackPanel Orientation="Vertical">
+
+                <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                        CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Undo}"
+                                        framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Undo}"/>
+
+                <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                        CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Redo}"
+                                        framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_Redo}"/>
+            </StackPanel>
+
+        </controls:RibbonGroup>
+        
+        <controls:RibbonGroup Header="Theme" DockPanel.Dock="Left">
+
+            <StackPanel Orientation="Vertical">
+
+                <controls:CommandButton ButtonStyle="ImageBesideText" ImageHeight="16" ImageWidth="16"
+                                        CommandModel="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_SelectTheme}"
+                                        framework:CreateCommandBinding.Command="{Binding Path=_WindowViewModel.vm_DocumentViewModel.cmd_SelectTheme}"/>
+            </StackPanel>
+
+        </controls:RibbonGroup>
+    </DockPanel>
+
+</UserControl>

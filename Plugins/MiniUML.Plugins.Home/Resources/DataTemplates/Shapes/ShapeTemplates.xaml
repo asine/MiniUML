@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:shapes="clr-namespace:MiniUML.Plugins.Home.Controls.Shapes">
+
+    <DataTemplate x:Key="MiniUML.UnknownShape">
+        <shapes:UnknownShape/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MiniUML.Text">
+        <shapes:Text/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MiniUML.Normal">
+        <shapes:Normal/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MiniUML.Line">
+        <shapes:Line Stroke="{Binding Path='Attribute[Stroke].Value'}"
+              FromX="{Binding Path='FirstNode.Attribute[Left].Value'}"
+              FromY="{Binding Path='FirstNode.Attribute[Top].Value'}"
+              ToX="{Binding Path='LastNode.Attribute[Left].Value'}"
+              ToY="{Binding Path='LastNode.Attribute[Top].Value'}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MiniUML.Circle">
+        <shapes:Circle Diameter="{Binding Path=Attribute[Diameter].Value, FallbackValue=25}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MiniUML.Egg">
+        <shapes:EasterEgg />
+    </DataTemplate>
+    
+</ResourceDictionary>
